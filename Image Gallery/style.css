@@ -1,0 +1,112 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: pink;
+}
+
+.title h1 {box-shadow: 5px 5px 10px black;}
+
+.title {
+	margin: 10px; 
+	text-align: center;
+	color: rgb(128, 3, 237);
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 10px;
+	justify-content: space-around;
+}
+.container div {
+	margin: 10px;
+	flex-basis: 16%;
+}
+ 
+.container img {
+	border-radius: 6px;
+	border: 3px solid white;
+	transform: traslate(-50%, -50%);
+	transition: 0.9s linear;
+	width: 200px;
+	height: 200px;
+	cursor: pointer;
+}
+
+.container img:hover {
+	transform: scale(1.1);
+	box-shadow: 4px 5px 8px black;
+	opacity: 0.8;
+}
+
+.buttons{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.buttons button{
+	padding: 8px 20px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.buttons button:hover{
+	color: blue;
+	background-color:gainsboro;
+}
+
+.hide{
+	display: none;
+}
+
+#lightbox {
+	display: none;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	align-items: center;
+	justify-content: center;
+}
+
+#lightbox-img {
+	width: 650px;
+	height: 400px;
+	object-fit: contain;
+}
+
+.prev ,.next{
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+}
+
+.close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 40px;
+	background: none;
+	color: white;
+	cursor: pointer;
+}
+
+@media (max-width: 768px){
+	#lightbox-img {
+	max-width: 80%;
+	max-height: 80%;
+	object-fit: contain;
+}
+}
+
+@media (max-width: 480px){
+	.title h1 {
+		font-size: 26px;
+	}
+}

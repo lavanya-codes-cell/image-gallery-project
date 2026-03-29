@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="title">
+<h1>
+Image Gallery
+</h1>
+</div>
+
+<div class="buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('nature')">Nature</button>
+  <button onclick="filterImages('animals')">Animals</button>
+  <button onclick="filterImages('flowers')">Flowers</button>
+</div>
+
+<div class="container">
+<img src="images/pic1.jpg" alt="loading.." class="animals" onclick="openltb(0)">
+
+<img src="images/pic2.jpg" alt="loading.." class="animals" onclick="openltb(1)">
+
+<img src="images/pic3.jpg" alt="loading.." class="flowers" onclick="openltb(2)"> 
+
+<img src="images/pic4.jpg" alt="loading.." class="flowers" onclick="openltb(3)">
+
+<img src="images/pic5.jpg" alt="loading.." class="flowers" onclick="openltb(4)">
+
+<img src="images/pic6.jpg" alt="loading.." class="nature" onclick="openltb(5)">
+
+<img src="images/pic7.jpg" alt="loading.." class="nature" onclick="openltb(6)">
+
+<img src="images/pic8.jpg" alt="loading.." class="animals" onclick="openltb(7)">
+
+<img src="images/pic9.jpg" alt="loading.." class="nature" onclick="openltb(8)">
+
+<img src="images/pic10.jpg" alt="loading.." class="nature" onclick="openltb(9)">
+
+<img src="images/pic11.jpg" alt="loading.." class="animals" onclick="openltb(10)">
+
+<img src="images/pic12.jpg" alt="loading.." class="flowers" onclick="openltb(11)">
+
+<img src="images/pic13.jpg" alt="loading.." class="animals" onclick="openltb(12)">
+
+<img src="images/pic14.jpg" alt="loading.." class="flowers" onclick="openltb(13)">
+
+<img src="images/pic15.jpg" alt="loading.." class="nature" onclick="openltb(14)">
+</div>
+
+<!--- lightbox --->
+<div id="lightbox">
+    <span class="close" onclick="closeltb()">x</span>
+    <button class="prev" onclick="changeImage(-1)">&#10096;</button>
+      <img id="lightbox-img">
+    <button class="next" onclick="changeImage(1)">&#10097;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
